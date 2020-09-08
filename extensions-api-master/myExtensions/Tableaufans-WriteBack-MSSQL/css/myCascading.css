@@ -1,0 +1,15 @@
+.btn-link {
+    color: #FF832B;
+}
+
+/*Hide some gui elements */
+#user_input {
+    width: 0px;    
+    visibility: hidden;
+}
+
+.col-sm-6 {
+    width: 0px;    
+    height: 0px;
+    visibility: hidden;
+}

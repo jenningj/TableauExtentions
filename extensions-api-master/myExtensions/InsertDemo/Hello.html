@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Hello Extensions</title>`
+
+     <!-- jQuery -->
+     <script src="lib/jquery-3.2.1.min.js"></script>
+
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="lib/bootstrap.min.css" >
+     <script src="lib/bootstrap.min.js" ></script>
+
+     <!-- Tableau Extensions API Library  -->
+     <!-- library is in the /lib directory -->
+     <script src="lib/tableau.extensions.1.latest.js"></script>
+
+     <!-- Your JavaScript code that uses the Extensions API goes here -->
+     <script src="./hello-extension.js"></script>
+     </head>
+     <body>
+       <div class="container">
+  
+        <div class="form_group">
+          <label for="persid" class="form_label">ID</label>
+          <input type="text" id="persid" class="form_field" size = "5" readonly="readonly" disabled> 
+        </div>
+
+        <div id="inputDiv">
+          <div class="form_group">
+            <label for="name" class="form_label">Name</label>
+            <input type="text" id="name" class="form_field" placeholder="Enter Name">
+            
+          </div>
+
+          <div class="form_group">
+            <label for="age" class="form_label">Age</label>
+            <input type="text" id="age" class="form_field" size = "3" placeholder="Enter Age">
+            
+          </div>
+
+          <div class="form_group">
+            <label for="salary" class="form_label">Salary</label>
+            <input type="text" id="salary" class="form_field" placeholder="Enter Salary">
+          </div>
+
+
+          
+          <!-- <button id="write_back_button" value="" >Submit</button> -->
+          <button id="update_data_button" value="" >Update</button>
+
+      </div>
+   
+      <div id="data_table_wrapper"></div>
+      <div id="no_data_message">
+       <!--  <h5>Select one mark...</h5> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Choose Sheet Dialog (See https://www.w3schools.com/bootstrap/bootstrap_modal.asp for bootstrap dialog info) -->
+  <div id="choose_sheet_dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Choose 1 Sheet from <span class="sheet_name" id="choose_sheet_title"></span></h4>
+        </div>
+        <div class="modal-body">
+          <div id="choose_sheet_buttons"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
